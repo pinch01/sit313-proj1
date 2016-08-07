@@ -57,7 +57,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7" />
+        android:id="@+id/txtGoalWeight" />
     <TextView
         android:text="Remaining:"
         android:textAppearance="?android:attr/textAppearanceMedium"

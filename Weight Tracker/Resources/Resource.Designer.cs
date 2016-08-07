@@ -66,14 +66,17 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050008
 			public const int btnAddWeighIn = 2131034120;
 			
-			// aapt resource value: 0x7f050022
-			public const int btnSaveUser = 2131034146;
+			// aapt resource value: 0x7f050023
+			public const int btnSaveUser = 2131034147;
 			
 			// aapt resource value: 0x7f050003
 			public const int btnSelectDate = 2131034115;
 			
 			// aapt resource value: 0x7f050011
 			public const int btnSummary = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int btnToDetails = 2131034130;
 			
 			// aapt resource value: 0x7f05000b
 			public const int lblCurrentWeight = 2131034123;
@@ -93,8 +96,11 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050000
 			public const int linearLayout1 = 2131034112;
 			
-			// aapt resource value: 0x7f05001b
-			public const int proWeight = 2131034139;
+			// aapt resource value: 0x7f05001c
+			public const int proWeight = 2131034140;
+			
+			// aapt resource value: 0x7f05001d
+			public const int scrollView1 = 2131034141;
 			
 			// aapt resource value: 0x7f05000c
 			public const int space1 = 2131034124;
@@ -111,26 +117,23 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050006
 			public const int textView3 = 2131034118;
 			
-			// aapt resource value: 0x7f050015
-			public const int textView4 = 2131034133;
-			
 			// aapt resource value: 0x7f050016
-			public const int textView5 = 2131034134;
+			public const int textView4 = 2131034134;
 			
-			// aapt resource value: 0x7f050014
-			public const int textView6 = 2131034132;
+			// aapt resource value: 0x7f050017
+			public const int textView5 = 2131034135;
 			
-			// aapt resource value: 0x7f050019
-			public const int textView7 = 2131034137;
-			
-			// aapt resource value: 0x7f050012
-			public const int txtBmiSummary = 2131034130;
+			// aapt resource value: 0x7f050015
+			public const int textView6 = 2131034133;
 			
 			// aapt resource value: 0x7f050013
-			public const int txtBodyFatSummary = 2131034131;
+			public const int txtBmiSummary = 2131034131;
 			
-			// aapt resource value: 0x7f050018
-			public const int txtCurrentWeight = 2131034136;
+			// aapt resource value: 0x7f050014
+			public const int txtBodyFatSummary = 2131034132;
+			
+			// aapt resource value: 0x7f050019
+			public const int txtCurrentWeight = 2131034137;
 			
 			// aapt resource value: 0x7f050002
 			public const int txtDate = 2131034114;
@@ -138,29 +141,29 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050007
 			public const int txtFat = 2131034119;
 			
-			// aapt resource value: 0x7f05001c
-			public const int txtFirstName = 2131034140;
+			// aapt resource value: 0x7f05001e
+			public const int txtFirstName = 2131034142;
+			
+			// aapt resource value: 0x7f050022
+			public const int txtGoalBodyFat = 2131034146;
 			
 			// aapt resource value: 0x7f050021
-			public const int txtGoalBodyFat = 2131034145;
-			
-			// aapt resource value: 0x7f05001f
-			public const int txtGoalDate = 2131034143;
-			
-			// aapt resource value: 0x7f050020
-			public const int txtGoalWeight = 2131034144;
-			
-			// aapt resource value: 0x7f05001e
-			public const int txtHeight = 2131034142;
-			
-			// aapt resource value: 0x7f05001d
-			public const int txtLastName = 2131034141;
+			public const int txtGoalDate = 2131034145;
 			
 			// aapt resource value: 0x7f05001a
-			public const int txtRemainingSummary = 2131034138;
+			public const int txtGoalWeight = 2131034138;
 			
-			// aapt resource value: 0x7f050017
-			public const int txtStartingWeight = 2131034135;
+			// aapt resource value: 0x7f050020
+			public const int txtHeight = 2131034144;
+			
+			// aapt resource value: 0x7f05001f
+			public const int txtLastName = 2131034143;
+			
+			// aapt resource value: 0x7f05001b
+			public const int txtRemainingSummary = 2131034139;
+			
+			// aapt resource value: 0x7f050018
+			public const int txtStartingWeight = 2131034136;
 			
 			// aapt resource value: 0x7f050005
 			public const int txtWeight = 2131034117;
@@ -185,10 +188,13 @@ namespace Weight_Tracker
 			public const int Main = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Summary = 2130903042;
+			public const int MainRefresh = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int UserDetails = 2130903043;
+			public const int Summary = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int UserDetails = 2130903044;
 			
 			static Layout()
 			{

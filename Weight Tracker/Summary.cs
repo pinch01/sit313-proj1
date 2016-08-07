@@ -41,7 +41,7 @@ namespace Weight_Tracker
         private void Initialize()
         {
             //Setting the content view
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Summary);
 
             //Setting user record
             if (User.userExists)
@@ -64,7 +64,7 @@ namespace Weight_Tracker
         private void SetValues()
         {
             //Setting progress bar to 0% initially
-            pbProgress.Progress = 0;
+           // pbProgress.Progress = 0;
 
             txtBMI.Text = "BMI: " + (Weight.getCurrentBMI(user) != -1 ? Weight.getCurrentBMI(user).ToString() : "Not Set");
             txtBoadyFat.Text = "Body Fat: " + (Weight.getCurrentBodyFat(user) != -1 ? Weight.getCurrentBodyFat(user).ToString() + "%" : "Not Set");

@@ -16,13 +16,13 @@ namespace Weight_Tracker
     public class UserDetails : Activity
     {
         //Variables
-        Button btnSaveUser;
         TextView txtFirstName;
         TextView txtLastName;
         TextView txtGoalDate;
         TextView txtGoalWeight;
         TextView txtGoalBodyFat;
         TextView txtUserHeight;
+        Button btnSaveUser;
 
         //Variables for validation
         private DateTime date;
@@ -46,20 +46,19 @@ namespace Weight_Tracker
 
         private void Initialize()
         {
-            // Set our view from the "main" layout resource
+            // Set our view from the "UserDetails" layout resource
             SetContentView(Resource.Layout.UserDetails);
 
             //Adding button press action
-            btnSaveUser = FindViewById<Button>(Resource.Id.btnSaveUser);
+
             txtFirstName = FindViewById<TextView>(Resource.Id.txtFirstName);
             txtLastName = FindViewById<TextView>(Resource.Id.txtLastName);
             txtGoalDate = FindViewById<TextView>(Resource.Id.txtGoalDate);
             txtGoalWeight = FindViewById<TextView>(Resource.Id.txtGoalWeight);
             txtGoalBodyFat = FindViewById<TextView>(Resource.Id.txtGoalBodyFat);
             txtUserHeight = FindViewById<TextView>(Resource.Id.txtHeight);
+            btnSaveUser = FindViewById<Button>(Resource.Id.btnSaveUser);
 
-
-            //Adding behaviour to buttons
             btnSaveUser.Click += delegate { btnSaveUser_Click(); };
             txtGoalDate.Click += delegate { DatePicker(txtGoalDate); };
 

@@ -16,6 +16,7 @@ namespace Weight_Tracker
 
         //Adding label elements
         Button btnSummary;
+        Button btnDetails;
         TextView lblCurrentWeight;
         TextView lblWeek;
         TextView lblMonth;
@@ -49,15 +50,18 @@ namespace Weight_Tracker
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.btnAdd);
             btnSummary = FindViewById<Button>(Resource.Id.btnSummary);
+            btnDetails = FindViewById<Button>(Resource.Id.btnToDetails);
 
             lblCurrentWeight = FindViewById<TextView>(Resource.Id.lblCurrentWeight);
             lblWeek = FindViewById<TextView>(Resource.Id.lblWeek);
+            lblMonth = FindViewById<TextView>(Resource.Id.lblMonth);
             lblYear = FindViewById<TextView>(Resource.Id.lblYear);
             lblTotal = FindViewById<TextView>(Resource.Id.lblTotal);
 
             //Assigning actions to buttons
             button.Click += delegate { btnAdd_Click(); };
             btnSummary.Click += delegate { btnSummary_Click(); };
+            btnDetails.Click += delegate { btnDetails_Click(); };
 
         }
 
@@ -117,6 +121,13 @@ namespace Weight_Tracker
         private void GoToSummary()
         {
             Intent ActivitySummary = new Intent(this, typeof(Summary));
+            StartActivity(ActivitySummary);
+        }
+
+        private void btnDetails_Click()
+        {
+            Intent ActivitySummary = new Intent(this, typeof(UserDetails));
+            StartActivity(ActivitySummary);
         }
 
         private void btnSummary_Click()
@@ -126,10 +137,23 @@ namespace Weight_Tracker
             {
                 GoToAddUser();
             }
+            else if (Weight.Count < 1)
+            {
+                showMessage("No weights have been entered.");
+            }
             else
             {
                 GoToSummary();
             }
+        }
+
+        private void showMessage(string message)
+        {
+            var builder = new AlertDialog.Builder(this);
+            builder.SetMessage(message);
+
+                builder.SetPositiveButton("OK", (s, e) => { });
+            builder.Create().Show();
         }
     }
 }

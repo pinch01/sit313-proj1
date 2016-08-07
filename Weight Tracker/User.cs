@@ -116,7 +116,7 @@ namespace Weight_Tracker
             return DalUser.getUser();
         }
 
-        public void update()
+        public void Update()
         {
             DalUser.Update(this);
         }
