@@ -26,15 +26,21 @@ namespace Weight_Tracker
 
         //Variables for validation
         private DateTime date;
-        private decimal weight;
-        private decimal fat;
-        private decimal height;
+        private Double weight;
+        private Double fat;
+        private Double height;
+        private bool IsNew;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Initialize();
             // Create your application here
+
+            if (User.userExists)
+                setUserDetails();
+            else
+                IsNew = true;
 
         }
 
@@ -59,6 +65,19 @@ namespace Weight_Tracker
 
         }
 
+        private void setUserDetails()
+        {
+            User user = User.getUser();
+            IsNew = false;
+
+            txtFirstName.Text = user.firstName;
+            txtLastName.Text = user.lastName;
+            txtGoalDate.Text = user.goalDate.ToShortDateString();
+            txtGoalWeight.Text = user.goalWeight.ToString();
+            txtGoalBodyFat.Text = user.goalBodyFat.ToString();
+            txtUserHeight.Text = user.height.ToString();
+        }
+
         private void btnSaveUser_Click()
         {
             // return if unable to validate fields
@@ -73,8 +92,10 @@ namespace Weight_Tracker
             user.goalWeight = weight;
             user.goalBodyFat = fat;
             user.height = height;
-
-            user.Add();
+            if (IsNew)
+                user.Add();
+            else
+                user.Update();
 
             //Returning to home screen
             Home();
@@ -97,7 +118,7 @@ namespace Weight_Tracker
                 return false;
             }
 
-            if (!Decimal.TryParse(txtUserHeight.Text, out height))
+            if (!Double.TryParse(txtUserHeight.Text, out height))
             {
                 showMessage("Height is not the correct format, please correct and try again.");
                 return false;
@@ -109,13 +130,13 @@ namespace Weight_Tracker
                 return false;
             }
 
-            if (!Decimal.TryParse(txtGoalWeight.Text, out weight))
+            if (!Double.TryParse(txtGoalWeight.Text, out weight))
             {
                 showMessage("Weight is not the correct format, please correct and try again.");
                 return false;
             }
 
-            if (!Decimal.TryParse(txtGoalBodyFat.Text, out fat))
+            if (!Double.TryParse(txtGoalBodyFat.Text, out fat))
             {
                 showMessage("Body Fat is not the correct format, please correct and try again.");
                 return false;

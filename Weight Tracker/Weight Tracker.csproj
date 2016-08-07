@@ -56,6 +56,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Summary.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserDetails.cs" />
     <Compile Include="Utility.cs" />
@@ -69,6 +70,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\UserDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Summary.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

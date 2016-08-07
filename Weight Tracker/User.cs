@@ -18,10 +18,10 @@ namespace Weight_Tracker
 
         private string _firstName;
         private string _lastName;
-        private decimal _height;
+        private Double _height;
         private DateTime _goalDate;
-        private decimal _goalWeight;
-        private decimal _goalBodyFat;
+        private Double _goalWeight;
+        private Double _goalBodyFat;
 
         #endregion
 
@@ -39,7 +39,7 @@ namespace Weight_Tracker
             set { _lastName = value; }
         }
 
-        public decimal height
+        public Double height
         {
             get { return _height; }
             set { _height = value; }
@@ -51,13 +51,13 @@ namespace Weight_Tracker
             set { _goalDate = value; }
         }
 
-        public decimal goalWeight
+        public Double goalWeight
         {
             get { return _goalWeight; }
             set { _goalWeight = value; }
         }
 
-        public decimal goalBodyFat
+        public Double goalBodyFat
         {
             get { return _goalBodyFat; }
             set { _goalBodyFat = value; }
@@ -77,7 +77,7 @@ namespace Weight_Tracker
 
         #region Constructors
 
-        public User(string fName, string lName, decimal nHeight, DateTime date, decimal weight, decimal bodyFat)
+        public User(string fName, string lName, Double nHeight, DateTime date, Double weight, Double bodyFat)
         {
             _firstName = fName;
             _lastName = lName;
@@ -91,10 +91,10 @@ namespace Weight_Tracker
         {
             _firstName = String.Empty;
             _lastName = String.Empty;
-            _height = Decimal.Zero;
+            _height = 0;
             _goalDate = DateTime.MinValue;
-            _goalWeight = Decimal.Zero;
-            _goalBodyFat = Decimal.Zero;
+            _goalWeight = 0;
+            _goalBodyFat = 0;
         }
 
         #endregion
@@ -109,6 +109,16 @@ namespace Weight_Tracker
         public static void Add(User user)
         {
             DalUser.Add(user);
+        }
+
+        public static User getUser()
+        {
+            return DalUser.getUser();
+        }
+
+        public void update()
+        {
+            DalUser.Update(this);
         }
 
         #endregion

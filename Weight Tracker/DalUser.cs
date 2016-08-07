@@ -29,5 +29,19 @@ namespace Weight_Tracker
         {
             users.Remove(user);
         }
+
+        public static User getUser()
+        {
+            //Method currently designed to only work with single user profile - will need to change access method if multiple users added
+            if (users.Count == 0)
+                throw new InvalidOperationException("Accessing users before any have been entered");
+
+            return users[0];
+        }
+
+        public static void Update(User user)
+        {
+            users[0] = user;
+        }
     }
 }

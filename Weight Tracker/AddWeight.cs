@@ -24,8 +24,8 @@ namespace Weight_Tracker
 
         //Variables
         private DateTime date;
-        private decimal weight;
-        private decimal fat;
+        private Double weight;
+        private Double fat;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -111,23 +111,20 @@ namespace Weight_Tracker
         // To be called before adding values to weight
         private bool ValidateFields()
         {
-            DateTime temp;
-            decimal tempDec;
-
             if (!DateTime.TryParse(txtDatePicker.Text, out date))
             {
                 showMessage("Date is not the correct format, please correct and try again.");
                 return false;
             }
 
-            if (!Decimal.TryParse(txtWeight.Text, out weight))
+            if (!Double.TryParse(txtWeight.Text, out weight))
             {
                 showMessage("Weight is not the correct format, please correct and try again.");
                 return false;
             }
 
 
-            if (!Decimal.TryParse(txtFat.Text, out fat))
+            if (!Double.TryParse(txtFat.Text, out fat))
             {
                 showMessage("Body Fat is not the correct format, please correct and try again.");
                 return false;

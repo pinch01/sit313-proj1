@@ -2,66 +2,71 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableLayout1"
-        android:minWidth="25px"
-        android:minHeight="25px">
-        <Button
-            android:text="Weigh In"
-            android:id="@+id/btnAdd" />
-    </TableLayout>
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    android:scrollbars="vertical">
     <TextView
-        android:text="Current Weight"
+        android:text="Summary"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
     <TextView
-        android:text="UNKNOWN"
+        android:text="BMI:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblCurrentWeight" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="35.0dp"
-        android:id="@+id/space1" />
+        android:id="@+id/txtBmiSummary" />
     <TextView
-        android:text="Weight Loss Tracking"
+        android:text="Body Fat:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBodyFatSummary" />
+    <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView6" />
     <TextView
-        android:text="Week:"
+        android:text="Progress"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+    <TextView
+        android:text="Weight Loss"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5" />
+    <TextView
+        android:text="Starting Weight:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblWeek" />
+        android:id="@+id/txtStartingWeight" />
     <TextView
-        android:text="Month:"
+        android:text="Current Weight:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblMonth" />
+        android:id="@+id/txtCurrentWeight" />
     <TextView
-        android:text="Year:"
+        android:text="Goal Weight:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblYear" />
+        android:id="@+id/textView7" />
     <TextView
-        android:text="Total:"
+        android:text="Remaining:"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblTotal" />
-    <Button
-        android:text="Summary"
+        android:id="@+id/txtRemainingSummary" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSummary" />
+        android:id="@+id/proWeight" />
 </LinearLayout>
