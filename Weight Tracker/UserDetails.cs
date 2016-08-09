@@ -23,6 +23,7 @@ namespace Weight_Tracker
         TextView txtGoalBodyFat;
         TextView txtUserHeight;
         Button btnSaveUser;
+        Button btnGoalDate;
 
         //Variables for validation
         private DateTime date;
@@ -58,9 +59,14 @@ namespace Weight_Tracker
             txtGoalBodyFat = FindViewById<TextView>(Resource.Id.txtGoalBodyFat);
             txtUserHeight = FindViewById<TextView>(Resource.Id.txtHeight);
             btnSaveUser = FindViewById<Button>(Resource.Id.btnSaveUser);
+            btnGoalDate = FindViewById<Button>(Resource.Id.btnChooseGoalDate);
 
             btnSaveUser.Click += delegate { btnSaveUser_Click(); };
-            txtGoalDate.Click += delegate { DatePicker(txtGoalDate); };
+            //txtGoalDate.Click += delegate { DatePicker(txtGoalDate); }; //Changed to a button instead of clicking on date
+            btnGoalDate.Click += delegate { btnGoalDate_Click(); };
+
+            //Setting default goal date - this will be overidden by SetUserDetails method if user exists
+            txtGoalDate.Text = DateTime.Now.AddMonths(6).ToShortDateString();
 
         }
 
@@ -157,6 +163,11 @@ namespace Weight_Tracker
                 element.Text = time.ToShortDateString();
             });
             frag.Show(FragmentManager, DatePickerFragment.TAG);
+        }
+
+        private void btnGoalDate_Click()
+        {
+            DatePicker(txtGoalDate);
         }
 
         private void showMessage(string message, bool home = false)

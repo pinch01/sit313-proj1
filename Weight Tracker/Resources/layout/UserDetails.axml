@@ -56,7 +56,15 @@
             p1:inputType="date"
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
-            p1:id="@+id/txtGoalDate" />
+            p1:id="@+id/txtGoalDate"
+            p1:clickable="false"
+            p1:editable="false"
+            p1:enabled="false" />
+        <Button
+            p1:text="Select Date"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnChooseGoalDate" />
         <TextView
             p1:text="Goal Weight"
             p1:textAppearance="?android:attr/textAppearanceMedium"

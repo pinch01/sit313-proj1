@@ -55,11 +55,10 @@ namespace Weight_Tracker
         {
             int i = 0;
 
-            while (i > Count - 1)
+            while (i < weights.Count)
             {
-                if (weights[i].weight != 0)
-                    return weights[i];
-                i++;
+                if (weights[i].weight > 0)
+                    return weights[0];
             }
 
             // if cant be found return null
@@ -70,7 +69,7 @@ namespace Weight_Tracker
         {
             int i = 0;
 
-            while (i > Count - 1)
+            while (i < weights.Count)
             {
                 if (weights[i].bodyFat != 0)
                     return weights[i];
@@ -86,7 +85,7 @@ namespace Weight_Tracker
             //starting from end of list
             int i = weights.Count - 1;
 
-            while (i > 0)
+            while (i >= 0)
             {
                 if (weights[i].weight != 0)
                     return weights[i];

@@ -24,6 +24,7 @@ namespace Weight_Tracker
         TextView txtGoalWeight;
         TextView txtRemaining;
         ProgressBar pbProgress;
+        Button btnHome;
 
         User user;
 
@@ -56,8 +57,13 @@ namespace Weight_Tracker
             txtCurrentWeight = FindViewById<TextView>(Resource.Id.txtCurrentWeight);
             txtGoalWeight = FindViewById<TextView>(Resource.Id.txtGoalWeight);
             txtRemaining = FindViewById<TextView>(Resource.Id.txtRemainingSummary);
+
+            btnHome = FindViewById<Button>(Resource.Id.btnSumHome);
             pbProgress = FindViewById<ProgressBar>(Resource.Id.proWeight);
             pbProgress.Max = 100;
+
+            //Adding action to home button
+            btnHome.Click += delegate { btnHome_Click(); };
 
         }
 
@@ -93,6 +99,12 @@ namespace Weight_Tracker
             percent = Math.Floor(percent);
 
             return Convert.ToInt32(percent);
+        }
+
+        private void btnHome_Click()
+        {
+            Intent ActivitySummary = new Intent(this, typeof(MainActivity));
+            StartActivity(ActivitySummary);
         }
     }
 }
