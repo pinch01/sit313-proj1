@@ -72,13 +72,13 @@ namespace Weight_Tracker
             //Setting progress bar to 0% initially
            // pbProgress.Progress = 0;
 
-            txtBMI.Text = "BMI: " + (Weight.getCurrentBMI(user) != -1 ? Weight.getCurrentBMI(user).ToString() : "Not Set");
-            txtBoadyFat.Text = "Body Fat: " + (Weight.getCurrentBodyFat(user) != -1 ? Weight.getCurrentBodyFat(user).ToString() + "%" : "Not Set");
+            txtBMI.Text = "BMI: " + (Weight.getCurrentBMI(user) != -1 ? Weight.getCurrentBMI(user).ToString("F") : "Not Set");
+            txtBoadyFat.Text = "Body Fat: " + (Weight.getCurrentBodyFat(user) != -1 ? Weight.getCurrentBodyFat(user).ToString("F") + "%" : "Not Set");
             //Setting weight loss variables
-            txtStartingWeight.Text = "Starting Weight: " + (Weight.getStartingWeight() != -1 ? Weight.getStartingWeight().ToString() : "Not Set");
-            txtCurrentWeight.Text = "Current Weight: " + (Weight.getCurrentWeight() != -1 ? Weight.getCurrentWeight().ToString() : "Not Set");
-            txtGoalWeight.Text = "Goal Weight: " + (user.goalWeight > 0 ? user.goalWeight.ToString() : "Not Set");
-            txtRemaining.Text = "Remaining: " + (Weight.getRemainingWeightLoss(user) != -1 ? Weight.getRemainingWeightLoss(user).ToString() : "Not Available");
+            txtStartingWeight.Text = "Starting Weight: " + (Weight.getStartingWeight() != -1 ? Weight.getStartingWeight().ToString() + "kg" : "Not Set");
+            txtCurrentWeight.Text = "Current Weight: " + (Weight.getCurrentWeight() != -1 ? Weight.getCurrentWeight().ToString() + "kg": "Not Set");
+            txtGoalWeight.Text = "Goal Weight: " + (user.goalWeight > 0 ? user.goalWeight.ToString() + "kg" : "Not Set");
+            txtRemaining.Text = "Remaining: " + (Weight.getRemainingWeightLoss(user) != -1 ? Weight.getRemainingWeightLoss(user).ToString() + "kg" : "Not Available");
 
             //Setting progress bar value
             pbProgress.Progress = getProgressPercent(Weight.getStartingWeight(), Weight.getCurrentWeight(), user.goalWeight);

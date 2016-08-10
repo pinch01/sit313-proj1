@@ -7,9 +7,11 @@
     p1:id="@+id/scrollView1">
     <LinearLayout
         p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
         p1:layout_width="match_parent"
         p1:layout_height="match_parent"
-        p1:fadeScrollbars="true"
+        p1:id="@+id/linearLayout1"
         p1:scrollbars="vertical">
         <TextView
             p1:text="Summary"
