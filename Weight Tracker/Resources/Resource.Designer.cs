@@ -60,11 +60,11 @@ namespace Weight_Tracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05000a
-			public const int btnAdd = 2131034122;
+			// aapt resource value: 0x7f05000b
+			public const int btnAdd = 2131034123;
 			
-			// aapt resource value: 0x7f050008
-			public const int btnAddWeighIn = 2131034120;
+			// aapt resource value: 0x7f050009
+			public const int btnAddWeighIn = 2131034121;
 			
 			// aapt resource value: 0x7f050023
 			public const int btnChooseGoalDate = 2131034147;
@@ -72,56 +72,56 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050025
 			public const int btnSaveUser = 2131034149;
 			
-			// aapt resource value: 0x7f050003
-			public const int btnSelectDate = 2131034115;
+			// aapt resource value: 0x7f050004
+			public const int btnSelectDate = 2131034116;
 			
 			// aapt resource value: 0x7f05001e
 			public const int btnSumHome = 2131034142;
 			
-			// aapt resource value: 0x7f050011
-			public const int btnSummary = 2131034129;
-			
 			// aapt resource value: 0x7f050012
-			public const int btnToDetails = 2131034130;
+			public const int btnSummary = 2131034130;
 			
-			// aapt resource value: 0x7f05000b
-			public const int lblCurrentWeight = 2131034123;
+			// aapt resource value: 0x7f050013
+			public const int btnToDetails = 2131034131;
 			
-			// aapt resource value: 0x7f05000e
-			public const int lblMonth = 2131034126;
-			
-			// aapt resource value: 0x7f050010
-			public const int lblTotal = 2131034128;
-			
-			// aapt resource value: 0x7f05000d
-			public const int lblWeek = 2131034125;
+			// aapt resource value: 0x7f05000c
+			public const int lblCurrentWeight = 2131034124;
 			
 			// aapt resource value: 0x7f05000f
-			public const int lblYear = 2131034127;
+			public const int lblMonth = 2131034127;
 			
-			// aapt resource value: 0x7f050000
-			public const int linearLayout1 = 2131034112;
+			// aapt resource value: 0x7f050011
+			public const int lblTotal = 2131034129;
+			
+			// aapt resource value: 0x7f05000e
+			public const int lblWeek = 2131034126;
+			
+			// aapt resource value: 0x7f050010
+			public const int lblYear = 2131034128;
+			
+			// aapt resource value: 0x7f050001
+			public const int linearLayout1 = 2131034113;
 			
 			// aapt resource value: 0x7f05001d
 			public const int proWeight = 2131034141;
 			
-			// aapt resource value: 0x7f050013
-			public const int scrollView1 = 2131034131;
+			// aapt resource value: 0x7f050000
+			public const int scrollView1 = 2131034112;
 			
-			// aapt resource value: 0x7f05000c
-			public const int space1 = 2131034124;
+			// aapt resource value: 0x7f05000d
+			public const int space1 = 2131034125;
 			
-			// aapt resource value: 0x7f050009
-			public const int tableLayout1 = 2131034121;
+			// aapt resource value: 0x7f05000a
+			public const int tableLayout1 = 2131034122;
 			
-			// aapt resource value: 0x7f050001
-			public const int textView1 = 2131034113;
+			// aapt resource value: 0x7f050002
+			public const int textView1 = 2131034114;
 			
-			// aapt resource value: 0x7f050004
-			public const int textView2 = 2131034116;
+			// aapt resource value: 0x7f050005
+			public const int textView2 = 2131034117;
 			
-			// aapt resource value: 0x7f050006
-			public const int textView3 = 2131034118;
+			// aapt resource value: 0x7f050007
+			public const int textView3 = 2131034119;
 			
 			// aapt resource value: 0x7f050017
 			public const int textView4 = 2131034135;
@@ -141,11 +141,11 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f05001a
 			public const int txtCurrentWeight = 2131034138;
 			
-			// aapt resource value: 0x7f050002
-			public const int txtDate = 2131034114;
+			// aapt resource value: 0x7f050003
+			public const int txtDate = 2131034115;
 			
-			// aapt resource value: 0x7f050007
-			public const int txtFat = 2131034119;
+			// aapt resource value: 0x7f050008
+			public const int txtFat = 2131034120;
 			
 			// aapt resource value: 0x7f05001f
 			public const int txtFirstName = 2131034143;
@@ -171,8 +171,8 @@ namespace Weight_Tracker
 			// aapt resource value: 0x7f050019
 			public const int txtStartingWeight = 2131034137;
 			
-			// aapt resource value: 0x7f050005
-			public const int txtWeight = 2131034117;
+			// aapt resource value: 0x7f050006
+			public const int txtWeight = 2131034118;
 			
 			static Id()
 			{

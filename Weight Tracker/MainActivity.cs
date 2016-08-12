@@ -79,10 +79,10 @@ namespace Weight_Tracker
 
         private void setWeightHistory()
         {
-            lblWeek.Text = "Week: " + Weight.getWeekLoss().ToString();
-            lblMonth.Text = "Month: " + Weight.getMonthLoss().ToString();
-            lblYear.Text = "Year: " + Weight.getYearLoss().ToString();
-            lblTotal.Text = "Total: " + Weight.getTotalLoss().ToString();
+            lblWeek.Text = "Week: " + Weight.getWeekLoss().ToString() + "kg";
+            lblMonth.Text = "Month: " + Weight.getMonthLoss().ToString() + "kg";
+            lblYear.Text = "Year: " + Weight.getYearLoss().ToString() + "kg";
+            lblTotal.Text = "Total: " + Weight.getTotalLoss().ToString() + "kg";
         }
 
         // To be called when the weigh in button is pressed

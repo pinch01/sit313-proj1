@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/scrollView1">
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tableLayout1"
         android:minWidth="25px"
         android:minHeight="25px">
-        <Button
-            android:text="Weigh In"
-            android:id="@+id/btnAdd" />
+      <Button
+          android:text="Weigh In"
+          android:id="@+id/btnAdd" />
     </TableLayout>
     <TextView
         android:text="Current Weight"
@@ -69,4 +75,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnToDetails" />
-</LinearLayout>
+  </LinearLayout>
+</ScrollView>
